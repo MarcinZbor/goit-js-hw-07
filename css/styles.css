@@ -14,6 +14,7 @@
   list-style: none;
   margin-left: auto;
   margin-right: auto;
+  filter: grayscale(100%);
 }
 
 .gallery__item {
