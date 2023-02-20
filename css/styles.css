@@ -44,3 +44,7 @@
 .gallery__link:hover {
   cursor: zoom-in;
 }
+
+.sl-caption.pos-bottom {
+  text-align: center;
+}

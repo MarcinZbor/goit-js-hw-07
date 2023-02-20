@@ -22,6 +22,4 @@ const lightbox = new SimpleLightbox(".gallery a", {
 	captionDelay: 250,
 	// captionPostion: bottom
 });
-const textCenter = document.querySelector(".sl-caption.pos-bottom");
-console.log(textCenter);
-textCenter.style.textAlign = "center";
+
