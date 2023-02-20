@@ -4,21 +4,24 @@ import { galleryItems } from "./gallery-items.js";
 const galleryContainer = document.querySelector(".gallery");
 const imageMarkup = createItemsMarkup(galleryItems);
 galleryContainer.insertAdjacentHTML("afterbegin", imageMarkup);
-
 function createItemsMarkup(images) {
-  return images
-    .map(({ preview, original, description }) => {
-      return`<li class = "gallery__item">
-    <a class="gallery__link" href = ${original}>
-    <img class="gallery__image" src = ${preview}
+	return images
+		.map(({ preview, original, description }) => {
+			return `<li class = "gallery__item">
+		<a class="gallery__link" href = ${original}>
+		<img class="gallery__image" src = ${preview}
     alt = ${description} />
         </a>
         </li>`;
-    })
+		})
 
-    .join("");
+		.join("");
 }
 const lightbox = new SimpleLightbox(".gallery a", {
-  captionsData: "alt",
-  captionDelay: 250,
+	captionsData: "alt",
+	captionDelay: 250,
+	// captionPostion: bottom
 });
+const textCenter = document.querySelector(".sl-caption.pos-bottom");
+console.log(textCenter);
+textCenter.style.textAlign = "center";
